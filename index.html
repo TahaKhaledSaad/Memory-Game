@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- ***** -->
+    <div class="control-buttons">
+      <div class="container">
+        <input type="text" class="name" placeholder="Enter Your Name" />
+        <span>Start Game</span>
+        <div class="information">
+          بُص يا صديقي، اللِّعبة دي عبـــــــــارة عن مجموعة صور، تمام!! إن شاء الله تمام، كل صورة من الصور دي متكــــررة مرتيـن فــلو المؤقت خلص عليك وانت بتلعب او عـديت ال 10 أخطاء فأنت كدا خســـرت، غير كـدا كسبت وليك اسكور زي بقية الناس اللـي بتلعب، تضغط ع الصورة تظهر ....الخ
+        </div>
+      </div>
+    </div>
+    <!-- ***** -->
+    <div class="info-container">
+      <div class="name">Hello: <span>Your-Name</span></div>
+      <div class="tries">Wrong Tries: <span>0</span></div>
+    </div>
+    <!-- ***** -->
+    <div class="memory-game-blocks">
+      <div class="game-block" data-image="img1">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img1.jpg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-image="img1">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img1.jpg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-image="img2">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img2.jpg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-image="img2">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img2.jpg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-image="img3">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img3.jpg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-image="img3">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img3.jpg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-image="img4">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img4.jpg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-image="img4">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img4.jpg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-image="img5">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img5.jpg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-image="img5">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img5.jpg" alt="" />
+        </div>
+      </div>
+      <!--
+      <div class="game-block" data-image="img6">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img6.jpg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-image="img6">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img6.jpg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-image="img7">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img7.jpg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-image="img7">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img7.jpg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-image="img8">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img8.jpg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-image="img8">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img8.jpg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-image="img9">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img9.jpg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-image="img9">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img9.jpg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-image="img10">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img10.jpg" alt="" />
+        </div>
+      </div>
+      <div class="game-block" data-image="img10">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="./imgs/img10.jpg" alt="" />
+        </div>
+      </div> -->
+    </div>
+    <!-- ***** -->
+    <div class="leader-board"></div>
+    <!-- ***** -->
+    <div class="countdown">Timer</div>
+    <div class="play-again">Again</div>
+    <!-- ***** -->
+    <div class="popup fail-popup">
+      You Lose,<br> Timer Finished, Or > 10 Wrongs.
+    </div>
+    <div class="popup success-popup">
+      You Win,<br>Check The Table.
+    </div>
+    <!-- ***** -->
+    <audio id="success" src="./audio/success3.mp3" preload="auto"></audio>
+    <audio id="fail" src="./audio/fail1.mp3" preload="auto"></audio>
+    <audio id="bgsound" src="./audio/bgsound.mp3" preload="auto"></audio>
+    <script src="./main.js"></script>
+  </body>
+</html>
